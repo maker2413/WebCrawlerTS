@@ -1,2 +1,5 @@
 # JavaScript garbage
 node_modules/
+
+# Generated report
+report.json

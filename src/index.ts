@@ -1,4 +1,5 @@
 import { crawlSiteAsync } from "./crawl";
+import { writeJSONReport } from "./report";
 
 async function main() {
   if (process.argv.length < 5) {
@@ -39,6 +40,8 @@ async function main() {
       `First page record: ${firstPage["url"]} - ${firstPage["heading"]}`,
     );
   }
+
+  writeJSONReport(pages, "report.json");
 
   process.exit(0);
 }
